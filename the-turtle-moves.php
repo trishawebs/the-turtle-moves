@@ -75,26 +75,9 @@ So much universe, and so little time.
 //Echo the chosen quote
 	function turtle_moves() {
 		$chosen = get_quote();
-		echo "<p id='turtle'>$chosen - Sir Terry Pratchett</p>";
+		echo "<p id='turtle' style='font-size: 80%; border: dotted 1px #888; border-radius: 5px; padding: 3px; width: 70%; margin: 0 auto; font-style: italic;'>$chosen - Sir Terry Pratchett</p>";
 	}
 
 /*Register after the post content */
 
 add_action('loop_end', 'turtle_moves');
-
-//CSS positioning for turtle moves
-function turtle_css() {
-	echo "
-		<style type='text/css'>
-		#turtle {
-		font-style: italic;
-		background: #fff;
-		color: #888;
-		border: dotted 1px #888;
-		padding: 3px;
-		margin: 0 auto;
-		font-size: 80%;
-	}";
-}
-
-add_action('loop_end', 'turtle_css');
